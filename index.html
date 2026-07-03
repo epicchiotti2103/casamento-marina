@@ -19,7 +19,7 @@
   z-index: 99999 !important;
 }
 #evento.section{
-  background: #FAF6FF; /* lavanda bem suave */
+  background: #FBF1F5; /* lavanda bem suave */
 }
 
 #evento .map-container{
@@ -36,7 +36,7 @@
 }
 
 #pix.hero{
-  background: linear-gradient(135deg, #FAF6FF, #F1E7FA);
+  background: linear-gradient(135deg, #FBF1F5, #F3E0EA);
   padding: 80px 0; /* deixa menos "hero" e mais seção */
 }
 #modal-hoteis.active {
@@ -69,24 +69,29 @@
   }
 }
         :root {
-    /* Amarelos da pétala */
-    --amarelo-claro: #F7DE7A;
-    --amarelo-principal: #F2C94C;
-    --amarelo-dourado: #E0B23E;
+    /* Verde oliva (destaque principal — botões, títulos, ícones-verde) */
+    --amarelo-claro: #DDE3C4;      /* oliva bem claro (início do hero) */
+    --amarelo-principal: #7C8A4E;  /* oliva */
+    --amarelo-dourado: #5A6733;    /* oliva escuro */
+    --verde-oliva: #6E7B3D;        /* oliva de apoio (banners/textos) */
 
-    /* Centro da flor */
-    --marrom-escuro: #3A2A1A;
-    --marrom-medio: #5C4632;
+    /* Tons escuros esverdeados p/ textos e rodapé */
+    --marrom-escuro: #33371F;
+    --marrom-medio: #55602F;
+    --marrom-elegante: #5F6347;    /* texto secundário */
 
-    /* Fundos suaves */
-    --fundo-claro: #FAF7F3;
-    --fundo-suave: #E6D2C8;
+    /* Rosa claro (fundos e detalhes) */
+    --fundo-claro: #FBF4F7;        /* fundo geral (branco rosado) */
+    --fundo-suave: #F3D9E2;        /* rosa suave (fim do hero) */
+    --terracota: #C77E96;          /* rosa/mauve p/ ícones, preços e hovers */
+    --cream: #F3E1E9;              /* rosa bem claro (bordas/rodapé) */
 
     /* Base */
     --branco: #ffffff;
 
-    --roxo-suave: #CBB6D8;      /* lavanda do fundo */
---roxo-profundo: #5A3A73;   /* opção mais forte p/ detalhes */
+    /* Seção PIX (gradiente rosa) */
+    --roxo-suave: #D98BA6;
+    --roxo-profundo: #A85C79;
 }
 
         * {
@@ -357,7 +362,7 @@
 .form-group textarea,
 #mural-form input,
 #mural-form textarea {
-    border: 1.5px solid #E3D7F0;   /* lavanda médio */
+    border: 1.5px solid #EAD3DD;   /* lavanda médio */
     background: #FFFFFF;
 }
 
@@ -366,8 +371,8 @@
 #mural-form input:focus,
 #mural-form textarea:focus {
     outline: none;
-    border-color: #5A3A73;         /* roxo elegante */
-    box-shadow: 0 0 0 3px rgba(90, 58, 115, 0.12);
+    border-color: #5A6733;         /* roxo elegante */
+    box-shadow: 0 0 0 3px rgba(90, 103, 51, 0.12);
 }
 
         .radio-group {
@@ -583,7 +588,7 @@
 
         #mural-form input,
 #mural-form textarea {
-  border: 2px solid #E3D7F0 !important;   /* lavanda médio (aparece) */
+  border: 2px solid #EAD3DD !important;   /* lavanda médio (aparece) */
   background: #FFFFFF !important;
   color: #3A2A1A !important;
   border-radius: 12px !important;
@@ -600,8 +605,8 @@
 #mural-form input:focus,
 #mural-form textarea:focus {
   outline: none !important;
-  border-color: #5A3A73 !important;       /* roxo */
-  box-shadow: 0 0 0 4px rgba(90, 58, 115, 0.14) !important;
+  border-color: #5A6733 !important;       /* roxo */
+  box-shadow: 0 0 0 4px rgba(90, 103, 51, 0.14) !important;
 }
     </style>
 </head>
@@ -1271,14 +1276,14 @@ muralRef.on('value', function(snapshot) {
   // Mostra as mais recentes primeiro
   mensagens.reverse().forEach(msg => {
     const div = document.createElement('div');
-    div.style.background = '#F5EEFB';
+    div.style.background = '#FBEFF4';
     div.style.borderRadius = '10px';
     div.style.padding = '1rem';
     div.style.marginBottom = '1rem';
-    div.style.border = '1px solid #E3D7F0';
+    div.style.border = '1px solid #EAD3DD';
 div.style.boxShadow = '0 6px 18px rgba(0,0,0,0.06)';
     div.innerHTML = `
-  <strong style="color:#5A3A73;">${msg.nome}</strong><br>
+  <strong style="color:#5A6733;">${msg.nome}</strong><br>
   <span style="opacity:0.9;">${msg.mensagem}</span>
 `;
     lista.appendChild(div);
